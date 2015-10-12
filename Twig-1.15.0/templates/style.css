@@ -1,0 +1,307 @@
+/* till huvud div sÃ¤rskrivet */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-size:100%;
+	
+}
+ol, ul {
+	list-style: none;
+}
+
+.clearfix {
+clear:both;
+}
+
+h1 {
+color: #333;
+font-family:'Lucida Console', Monaco, monospace;
+font-size:24px;
+text-align:center;
+}
+
+a {
+color: #000;	
+}
+
+a:hover {	
+color: #000;
+}
+
+#header {
+	border-bottom: 4px solid #4C9CF1;
+}
+
+#container {
+	background-color:#FFF;
+	padding: 1em 1em;
+	max-width: 960px;
+    width: 100%;
+    margin-right:auto;margin-left:auto;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.5);
+}
+#main {
+	clear: left;
+	height:100%;
+	border: 0;
+	
+}
+#left {
+	list-style-type:none;
+	border-left: none;
+	border-right: 1px solid #ccc;
+	float: left;
+	width: 15%;
+	margin-bottom: 1em;
+	padding-right:1em;
+	height:100%;
+}
+#right {
+	float:left;
+	width:80%;
+	height:100%;
+}
+
+#footer {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;     
+    background-color:#FFF;
+	border-top: 2px solid #ccc;
+	max-height:200px;
+	max-width:100%;
+	height: 100%;
+	width:100%;
+	display:inline-block;
+	padding-top:0.5%;
+}
+/* Fram sida */
+#kattbild1 {	
+	float: left;
+	width: 33%;
+}
+#kattbild2 {	
+	float: left;
+	width: 33%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+}
+#kattbild3 {	
+	float: left;
+	width: 33%;
+	padding-bottom: 0.5%;
+}
+#underbild {	
+	float: left;
+	width: 100%;
+	padding-bottom: 0.5%;
+}
+
+#katter {
+	padding-bottom:1em;
+	padding-top:1em;
+	max-width:960px; 
+	height:auto;
+	float:left;
+}
+/*Slut framsida*/
+
+/* till länkarna */
+nav {
+	float:right;
+}
+#menu {
+	border: 2px solid #ccc;
+	border-left: none;
+	border-right: none;
+	float: left;
+	width: 100%;
+	height:100%;
+	margin-bottom: 2.5em;
+}
+#menu-icon {
+display: hidden;
+width: 40px;
+height: 40px;
+background: #ccc url(img/Menu.png) center;
+}
+a:hover#menu-icon {
+background-color: #444;
+border-radius: 4px 4px 0 0;
+}
+#menu li {
+	display:inline-block;
+	float: left;
+	padding: 0.938em;	
+}
+#menu a {
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size: 1.5vh;
+}
+#menu .active {
+	text-decoration: tomato;
+	color:#e20007;
+}
+#menu a:hover {
+	color:#7A7A7A;
+}
+/*Slut på länkarna*/
+
+/*tillbehÃ¶r sida*/
+#kattmat1 {
+width: 50%; 
+height: auto; 
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 1em;   
+}
+#kattmat2{
+float: left; 
+width: 30%;
+max-width: 50%; 
+height: auto; 
+margin-bottom: 1em;
+padding:2%;
+}
+#kattmat3{
+float: left; 
+width: 30%; 
+height: auto; 
+margin-bottom: 1em;
+padding:2%;
+}
+#kattleksak1 {
+float: left;
+width: 30%; 
+height: auto; 
+margin-bottom: 1em;
+padding:2%;
+}
+#kattleksak2{
+float: right;  
+width: 40%; 
+height: auto; 
+margin-bottom: 1em;  
+}
+#kattleksak3{
+float: left; 
+width: 30%;
+max-width: 50%; 
+height: auto; 
+margin-bottom: 1em;
+padding:2%;
+}
+#kattredskap1 {
+float: right;  
+width: 40%;
+height: auto; 
+height: 64%;
+margin-bottom: 1em;
+}
+#kattredskap2{
+float: left;  
+width: 30%; 
+height: auto; 
+margin-bottom: 1em;
+padding:2%; 
+}
+#kattredskap3{
+float: left; 
+width: 30%;
+height: auto; 
+margin-bottom: 1em;
+padding:2%;
+}
+#kattklader1 {
+float: right;  
+width: 40%; 
+height: auto; 
+height: 64%;
+margin-bottom: 1em;
+}
+#kattklader2{
+float: left;  
+width: 30%;
+height: auto; 
+margin-bottom: 1em;
+padding:2%; 
+}
+#kattklader3{
+float: left; 
+width: 30%; 
+height: auto; 
+margin-bottom: 1em;
+padding:2%;
+}
+/*slut tillbehör*/
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 820px) {
+header {
+position: absolute;
+}
+#menu-icon {
+display:inline-block;
+float:right;
+margin-right:1em;
+margin-top:0.3em;
+}
+#menu a {
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size: 1em;
+}
+nav ul, nav:active ul {
+display: none;
+position: absolute;
+padding: 20px;
+background: #fff;
+border: 5px solid #444;
+right: 20px;
+top: 60px;
+width: 50%;
+border-radius: 4px 0 4px 4px;
+}
+nav li {
+text-align: center;
+width: 100%;
+padding: 10px 0;
+margin: 0;
+}
+nav:hover ul {
+display: block;
+}
+/*-----------------------*/
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+        <title>kattmandu.se | Professionell katt | bort</title>	
+        <meta name="description" content="Professionell kattklippning på internet">
+        <meta name="keywords" content="klippning, tvättning, torkning">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    </head>
+    <!--http://iphone5csimulator.com/-->
+    <body>
+        <div data-role="page">
+
+            <div data-role="header">
+                <div data-role="navbar">
+                    <ul>
+
+                        <li><a href="index1.php?MobileController/" title="Hem">Hem</a></li>
+                        <li><a href="index1.php?MobileController/getKategori/" title="Produkter">Produkter</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="index1.php?MobileController/getKontakt" title="Kontakt">Kontakt</a></li>
+                        <li><a href="index1.php?MobileController/showCart" title="KUNDVAGN">@ Kundvagn</a></li>  
+                    </ul>
+                </div>
+            </div><!-- /header -->
+
+            <div data-role="main" class="ui-content">
+                <h1 style="text-align: center;margin-bottom:0em;margin-top:0em;">KATTMANDU</h1>
+                <h2 style="text-align: center;font-size: 1em;margin-top:0em;">Kattprodukter på internet</h2>
+
+
+                <div id="kattbild1"> 
+                    <a href="index1.php?MobileController/getKategori/Kattmat"><img src="../img/kattmat.jpg" alt="köp kattmat" title="köp kattmat" style="max-width:100%; height:auto;			"></a>
+                </div>
+                <div id="kattbild2">
+                    <a href="index1.php?MobileController/getKategori/Kattredskap"><img src="../img/mobel.jpg" alt="köp kattmöbel" title="köp kattmöbel" style="max-width:100%;     		 				height:auto;"></a>
+                </div>
+                <div id="kattbild3">
+                    <a href="index1.php?MobileController/getKategori/Kattleksaker"> <img src="../img/rattor.jpg" alt="köp Kattleksaker" title="köp Kattleksaker" style="max-width:		         		100%; height:auto;"></a>
+                </div>
+                <br>
+                <div id="underbild">
+                    <br>
+                    <a href="index1.php?MobileController/getKategori/Katter"><img src="../img/svart-katt.jpg" alt="köp katter" title="köp katter" style="max-width:100%; height:  				auto;"></a>
+                </div>  
+            </div><!-- /main -->
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Kattmandu</h4>
+                <a href="tel:+070-212112121" data-icon="phone" class="ui-btn-right">Ring</a>
+                <a href="mailto:h12toblu@du.se" data-icon="mail" class="ui-btn-left">E-Post</a>
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+    </body>
+</html>

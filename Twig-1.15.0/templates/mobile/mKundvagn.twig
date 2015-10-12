@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+        <title>kattmandu.se | Professionell katt | bort</title>	
+        <meta name="description" content="Professionell kattklippning på internet">
+        <meta name="keywords" content="klippning, tvättning, torkning">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    </head>
+    <!--http://iphone5csimulator.com/-->
+    <body>
+        <div data-role="page">
+
+            <div data-role="header">
+                <div data-role="navbar">
+                    <ul>
+
+                        <li><a href="index1.php?MobileController/" title="Hem">Hem</a></li>
+                        <li><a href="index1.php?MobileController/getKategori/" title="Produkter">Produkter</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="index1.php?MobileController/getKontakt" title="Kontakt">Kontakt</a></li>
+                        <li><a href="index1.php?MobileController/showCart" title="KUNDVAGN">@ Kundvagn</a></li>  
+                    </ul>
+                </div>
+            </div><!-- /header -->
+
+            <div data-role="main" class="ui-content">
+                <table>                  
+                        {#loopar bilarArray som fylldes med data i
+                        ControllerBil.php#}
+                       {%for produkt in produktArray %}
+
+                        <tr><td>Produkt:</td><td>{{produkt[0].Produkt}}</td></tr>
+                        <tr><td>Beskrivning:</td><td>{{produkt[0].Beskrivning}}</td></tr>
+                        <tr><td>Pris:</td><td>{{produkt[0].Pris|number_format(2,',',' ')}} kr</td></tr>
+                        <tr><td>Antal:</td><td>{{produkt[1]}}</td></tr>
+                        <tr><td>Betala:</td><td>{{ (produkt[1] * produkt[0].Pris)|number_format(2,',',' ')}} kr</td></tr>
+                        <tr><td></td><td><a href='index1.php?MobileController/deleteFromCart/{{produkt[0].Produkt}}'>Ta bort</a></td></tr>
+                        <tr><td colspan="2"><hr><td><tr>
+                       {%endfor%}
+
+                                <tr><td>Att Betala:</td><td align="right">{{attBetala|number_format(2, ',', ' ')}} kr</td></tr>                  
+                            </table>
+                            <a href='index1.php?MobileController/getKategori/'>Köp mer</a>
+                        </div><!-- /content -->
+
+
+                        <div data-role="footer" data-position="fixed">
+                            <h4>Kattmandu</h4>
+                            <a href="tel:+070-212112121" data-icon="phone" class="ui-btn-right">Ring</a>
+                            <a href="mailto:h12toblu@du.se" data-icon="mail" class="ui-btn-left">E-Post</a>
+                        </div><!-- /footer -->
+
+                    </div><!-- /page -->
+                </body>
+            </html>

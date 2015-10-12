@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+        <title>kattmandu.se | Professionell katt | bort</title>	
+        <meta name="description" content="Professionell kattklippning på internet">
+        <meta name="keywords" content="klippning, tvättning, torkning">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    </head>
+    <!--http://iphone5csimulator.com/-->
+    <body>
+        <div data-role="page">
+
+            <div data-role="header">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index1.php?MobileController" title="Hem">Hem</a></li>
+                        <li><a data-rel="back" title="Tillbaka">Tillbaka</a></li>                        
+                    </ul>
+                    <ul>
+                        <li><a href="index1.php?MobileController/getKontakt" title="Kontakt">Kontakt</a></li>
+                        <li><a href="index1.php?MobileController/showCart" title="KUNDVAGN">@ Kundvagn</a></li>  
+                    </ul>
+                </div>
+            </div><!-- /header -->
+
+            <div data-role="main" class="ui-content">
+             {%for produkt in produkter%}
+                                    <img src="{{produkt.Bild}}" alt="Doe" title="Bild på kattmat2" style="float:left; max-width: 100%;">
+                                    <p>{{produkt.Produkt}}, {{produkt.Beskrivning}}, {{produkt.Pris}}</p>
+                                    <a href="index1.php?MobileController/addToCart/{{produkt.Produkt}}"> <BUTTON type="submit" >Lägg i kundvagn</button></a>
+                {#% if (inloggad == 'inloggad')%}
+                <a href="index1.php?Controller/showUpdateForm/{{produkt.Produkt}}"> <BUTTON type="submit" >Uppdatera</button></a>
+                <a href="index1.php?Controller/deleteProdukt/{{produkt.Produkt}}"> <BUTTON type="submit">Ta bort dig</button></a>
+                {% else %}
+                {%endif%#}        
+                {% endfor %}
+            </div><!-- /main -->
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Kattmandu</h4>
+                <a href="tel:+070-212112121" data-icon="phone" class="ui-btn-right">Ring</a>
+                <a href="mailto:h12toblu@du.se" data-icon="mail" class="ui-btn-left">E-Post</a>
+            </div><!-- /footer -->
+
+        </div><!-- /page -->
+    </body>
+</html>

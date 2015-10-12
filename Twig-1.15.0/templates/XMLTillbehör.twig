@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<link rel="stylesheet" type="text/css" href="../templates/style.css">
+	<meta charset="UTF-8">
+	<title>katttillbehör, kattredskap, kattmat, kattleksaker, kattkläder</title>
+	<script src="modernizr/modernizr.custom.74987.js" type="text/javascript"></script> 
+	<style type="text/css">
+        .clearfix {
+clear:both;
+}
+body{font-size:100%;}
+	</style>
+	
+	<meta name="description" content="Professionell kattklippning på internet">
+	<meta name="keywords" content="klippning, tvättning, torkning">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+ 	
+</head>
+<body>
+<div id="container">
+	<div id="header">
+            <br>
+            <img src="../img/banner.png" alt="Katter mm" style="border:none; max-width:100%; height:auto;float:left;" />
+	</div>
+    <div id="menu">
+			<ul>
+        		<li>
+				<form action="sphider/search.php" method="get">
+				<input type="text" name="query" id="query" size="15" value="">
+				<input type="submit" value="Sök">
+				<input type="hidden" name="Sök" value="1">
+				</form>
+            	</li>
+        	</ul>
+		<nav>
+	
+    	<a href="#" id="menu-icon"></a>
+        
+		<ul>
+			<li><a href="index1.php?XMLController" title="Startsida">Hem</a></li>
+			<li><a href="index1.php?XMLController/getKategori/katter" title="Katter">Katter</a></li>
+			<li><a href="index1.php?XMLController/getKategori" class="active" title="TillbehÃ¶r">Tillbehör</a></li>
+            <li><a href="index1.php?XMLController/getKontakt" title="Kontakt">Kontakt</a></li>
+            <li><a href="index1.php?XMLController/showCart" title="KUNDVAGN">@ Kundvagn</a></li>
+		</ul>
+        </nav>
+	</div>
+		<div id="main">
+		     <div id="left">
+                         {%for kategori in unikaKategorier%}
+                            <li> <a href="index1.php?XMLController/getKategori/{{kategori.kategori}}"> {{kategori.kategori}}</li></a>
+                            <br>
+                         {%endfor%}
+					
+                </div>
+<div id="right">
+                <div id="kattmat1"> 
+                    {#{produkter[0].bild}#}
+                {%for produkt in produkter%}
+                <a href="index1.php?XMLController/getProdukt/{{produkt.produkt}}">
+                <img src="{{produkt.bild}}" alt="Doe" title="Bild pÃ¥ kattmat2" style="float:left; max-width: 100%;">
+                </a>
+                {%endfor%}       
+                </div>
+        
+        </div>
+</div>
+	<div id="footer">
+		<p style="float:left;"> h12toblu@du.se</p>
+                <p style="float:right;">Kattmandu 2014</p>
+                <br>
+                <a style="font-size:0.8em;color:black;float:left;" href="kontakt.html" title="kontakt">Kontakt</a>
+                <img src="../img/footer.gif" alt="Katter" style="max-width:100%; height:auto;float:left;" />
+	</div>
+        
+</div>
+</body>
+</html>
